@@ -59,7 +59,7 @@ let start = +process.argv[2] ? +process.argv[2] : 1;
 let factorTarget = +process.argv[3] ? +process.argv[3] : 500;
 let limit = +process.argv[4] ? +process.argv[4] : 500000;
 // Let's find those factors!
-for (i=1; i < limit; i++)
+for (i=start; i < start+limit; i++)
 {
   let triangle = factorizer.getNthTriangle(i);
   let count = factorizer.getFactorCount(triangle);
